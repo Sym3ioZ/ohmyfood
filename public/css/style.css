@@ -1,6 +1,17 @@
-::-webkit-search-results-button/* Colors */
-body {
-  background: #9356DC;
+* {
+  box-sizing: border-box;
 }
 
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+}
+
+header {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+header img {
+  width: 50%;
+}
