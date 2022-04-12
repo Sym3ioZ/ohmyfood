@@ -1,5 +1,7 @@
 * {
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -8,10 +10,31 @@ body {
 
 header {
   padding-top: 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 header img {
   width: 50%;
+}
+
+.loc-search {
+  height: 50px;
+  padding: 5px 0 10px 0;
+  background: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 3px #CCCCCC inset;
+}
+.loc-search form #loc-search {
+  margin-left: 5px;
+  height: 35px;
+  border: 0 hidden;
+  text-align: center;
+  background: #EAEAEA;
+  font-size: large;
+  font-weight: 600;
 }

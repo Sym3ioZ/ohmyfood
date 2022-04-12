@@ -1,0 +1,19 @@
+.loc-search{
+    height: 50px;
+    padding: 5px 0 10px 0;
+    background: $loc-search-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 3px 3px $shadow inset;
+    & form #loc-search{
+        margin-left: 5px;
+        height: 35px;
+        border: 0 hidden;
+        text-align: center;
+        background: $loc-search-bg;
+        font-size: large;
+        font-weight: 600;
+    }
+}
