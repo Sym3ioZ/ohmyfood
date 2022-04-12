@@ -1,8 +1,10 @@
 .button{
+    max-width: 400px;
     background: $btn-bg;
     border-radius: 9999px;
     color: white;
     padding: 15px 20px;
-    margin: 20px 0;
+    margin: 25px 0;
     box-shadow: 5px 5px 10px $shadow, -5px 5px 10px $shadow;
+    position: relative;
 }

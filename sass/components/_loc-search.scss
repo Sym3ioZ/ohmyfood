@@ -7,6 +7,9 @@
     justify-content: center;
     align-items: center;
     box-shadow:0 3px 5px $shadow inset;
+    & i{
+        color: $icon_color;
+    }
     & form #loc-search{
         margin-left: 5px;
         height: 35px;
@@ -14,6 +17,6 @@
         text-align: center;
         background: $loc-search-bg;
         font-size: large;
-        font-weight: 600;
+        font-weight: 500;
     }
 }

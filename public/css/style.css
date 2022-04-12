@@ -10,7 +10,8 @@ body {
 }
 
 h1 {
-  font-size: xx-large;
+  font-size: x-large;
+  font-weight: 700;
   margin: 20px 0;
 }
 
@@ -24,6 +25,9 @@ h1 {
   align-items: center;
   box-shadow: 0 3px 5px #CCCCCC inset;
 }
+.loc-search i {
+  color: #555555;
+}
 .loc-search form #loc-search {
   margin-left: 5px;
   height: 35px;
@@ -31,16 +35,37 @@ h1 {
   text-align: center;
   background: #EAEAEA;
   font-size: large;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .button {
-  background: #B762DC;
+  max-width: 400px;
+  background: #9356DC;
   border-radius: 9999px;
   color: white;
   padding: 15px 20px;
-  margin: 20px 0;
+  margin: 25px 0;
   box-shadow: 5px 5px 10px #CCCCCC, -5px 5px 10px #CCCCCC;
+  position: relative;
+}
+
+.btn-number {
+  color: white;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  background: #9356DC;
+  padding: 5px;
+  position: absolute;
+  left: -10px;
+}
+
+.btn-icon {
+  color: #555555;
+  font-size: larger;
+  position: absolute;
+  left: 35px;
 }
 
 header {
@@ -55,11 +80,33 @@ header img {
 }
 
 .presentation {
-  width: 80%;
-  padding-top: 20px;
+  background: #FAFAFA;
+  padding: 20px 40px;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.usage {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.usage .button {
+  border-radius: 15px;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #FAFAFA;
+  color: black;
+}
+.usage .button p {
+  font-size: large;
+  font-weight: 700;
+  position: absolute;
+  left: 70px;
 }
