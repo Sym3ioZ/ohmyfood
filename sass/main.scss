@@ -1,5 +1,11 @@
 @import "./utils/variables";
+
 @import "./base/base";
-@import "./pages/index";
-@import "./layout/header";
+
 @import "./components/loc-search";
+@import "./components/button";
+
+@import "./layout/header";
+
+@import "./pages/index";
+

@@ -2,10 +2,45 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+  margin: 0;
 }
 
 body {
   margin: 0;
+}
+
+h1 {
+  font-size: xx-large;
+  margin: 20px 0;
+}
+
+.loc-search {
+  height: 50px;
+  padding: 5px 0 5px 0;
+  background: #EAEAEA;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 5px #CCCCCC inset;
+}
+.loc-search form #loc-search {
+  margin-left: 5px;
+  height: 35px;
+  border: 0 hidden;
+  text-align: center;
+  background: #EAEAEA;
+  font-size: large;
+  font-weight: 600;
+}
+
+.button {
+  background: #B762DC;
+  border-radius: 9999px;
+  color: white;
+  padding: 15px 20px;
+  margin: 20px 0;
+  box-shadow: 5px 5px 10px #CCCCCC, -5px 5px 10px #CCCCCC;
 }
 
 header {
@@ -19,22 +54,12 @@ header img {
   width: 50%;
 }
 
-.loc-search {
-  height: 50px;
-  padding: 5px 0 10px 0;
-  background: #EAEAEA;
+.presentation {
+  width: 80%;
+  padding-top: 20px;
+  margin: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  box-shadow: 0 3px 3px #CCCCCC inset;
-}
-.loc-search form #loc-search {
-  margin-left: 5px;
-  height: 35px;
-  border: 0 hidden;
   text-align: center;
-  background: #EAEAEA;
-  font-size: large;
-  font-weight: 600;
 }

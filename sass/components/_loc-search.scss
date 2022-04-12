@@ -1,12 +1,12 @@
 .loc-search{
     height: 50px;
-    padding: 5px 0 10px 0;
+    padding: 5px 0 5px 0;
     background: $loc-search-bg;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    box-shadow:0 3px 3px $shadow inset;
+    box-shadow:0 3px 5px $shadow inset;
     & form #loc-search{
         margin-left: 5px;
         height: 35px;
