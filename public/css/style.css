@@ -10,8 +10,8 @@ a {
   color: black;
 }
 
-body {
-  margin: 0;
+i {
+  color: #555555;
 }
 
 h1 {
@@ -77,9 +77,6 @@ li i {
   align-items: center;
   box-shadow: 0 3px 5px #CCCCCC inset;
 }
-.loc-search i {
-  color: #555555;
-}
 .loc-search form #loc-search {
   margin-left: 5px;
   height: 35px;
@@ -114,7 +111,6 @@ li i {
 }
 
 .btn-icon {
-  color: #555555;
   font-size: larger;
   position: absolute;
   left: 35px;
@@ -168,6 +164,20 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
+}
+header a {
+  position: absolute;
+  left: 20px;
+  align-self: center;
+}
+header i {
+  font-size: x-large;
+}
+@media screen and (min-width: 900px) {
+  header i {
+    font-size: xx-large;
+  }
 }
 header img {
   width: 50%;
@@ -178,7 +188,7 @@ footer {
   color: white;
   padding: 20px 15px;
 }
-footer a {
+footer a, footer i {
   color: white;
 }
 footer__link {
