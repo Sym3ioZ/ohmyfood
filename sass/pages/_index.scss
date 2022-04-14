@@ -12,20 +12,39 @@
     padding: 20px 20px;
     display: flex;
     flex-direction: column;
-    & .button{
+    &__buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__buttons .button:hover{
+        background: #F5EDFF;
+        & i{
+            color: $color-primary;
+        }
+    }
+    &__buttons .button{
+        width: 100%;
         border-radius: 15px;
         padding: 40px 0;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        align-self: center;
         background: $light-bg;
         color: black;
     }
-    & .button p{
+    &__buttons .button p{
         font-size: large;
         font-weight: 700;
         position: absolute;
         left: 70px;
     }
+}
+
+.restaurants{
+    display: flex;
+    flex-direction: column;
+    background: lime;
 }

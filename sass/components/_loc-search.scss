@@ -1,7 +1,7 @@
 .loc-search{
     height: 50px;
     padding: 5px 0 5px 0;
-    background: $loc-search-bg;
+    background: $dark-bg;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -14,8 +14,8 @@
         margin-left: 5px;
         height: 35px;
         border: 0 hidden;
-        text-align: center;
-        background: $loc-search-bg;
+        text-align: right;
+        background: $dark-bg;
         font-size: large;
         font-weight: 500;
     }

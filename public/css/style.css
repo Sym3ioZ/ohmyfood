@@ -3,6 +3,7 @@
   box-sizing: border-box;
   text-decoration: none;
   margin: 0;
+  color: black;
 }
 
 body {
@@ -32,7 +33,7 @@ h1 {
   margin-left: 5px;
   height: 35px;
   border: 0 hidden;
-  text-align: center;
+  text-align: right;
   background: #EAEAEA;
   font-size: large;
   font-weight: 500;
@@ -68,6 +69,48 @@ h1 {
   left: 35px;
 }
 
+.card {
+  width: 95%;
+  max-width: 400px;
+  margin: 0px auto;
+  position: relative;
+  border-radius: 20px;
+}
+.card__link {
+  border-radius: 20px;
+}
+.card__new-flag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #008766;
+  background: #99E2D0;
+  border-radius: 3px;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 15px 15px;
+  z-index: 2;
+}
+.card__image {
+  height: 275px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+.card__image img {
+  z-index: 1;
+  width: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card__body {
+  background: white;
+  padding: 20px 15px;
+  border-radius: 0 0 20px 20px;
+}
+
 header {
   padding-top: 20px;
   padding-bottom: 10px;
@@ -80,7 +123,7 @@ header img {
 }
 
 .presentation {
-  background: #FAFAFA;
+  background: #f5f5f5;
   padding: 20px 40px;
   margin: auto;
   display: flex;
@@ -94,19 +137,38 @@ header img {
   display: flex;
   flex-direction: column;
 }
-.usage .button {
+.usage__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.usage__buttons .button:hover {
+  background: #F5EDFF;
+}
+.usage__buttons .button:hover i {
+  color: #9356DC;
+}
+.usage__buttons .button {
+  width: 100%;
   border-radius: 15px;
   padding: 40px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: #FAFAFA;
+  align-self: center;
+  background: #f5f5f5;
   color: black;
 }
-.usage .button p {
+.usage__buttons .button p {
   font-size: large;
   font-weight: 700;
   position: absolute;
   left: 70px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background: lime;
 }
