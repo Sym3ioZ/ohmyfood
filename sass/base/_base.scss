@@ -1,9 +1,12 @@
 *{
     font-family: 'Roboto', sans-serif;
-    // font-family: 'Shrikhand', cursive;
     box-sizing: border-box;
-    text-decoration: none;
     margin: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
     color: black;
 }
 body{
@@ -13,4 +16,43 @@ h1{
     font-size: x-large;
     font-weight: 700;
     margin: 20px 0;
+}
+h4{
+    font-size: large;
+    font-weight: 300;
+    margin-top: 5px;
+}
+h5{
+    font-family: 'Shrikhand', cursive;
+    font-size: x-large;
+    font-weight: 200;
+}
+p{
+    @include desktop{
+        font-size: large;
+    }
+}
+ul{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    & i{
+        width: 25px;
+        font-size: small;
+        padding-right: 10px;
+    }
+    @include desktop{
+        padding: 10px 20px;
+    }
 }

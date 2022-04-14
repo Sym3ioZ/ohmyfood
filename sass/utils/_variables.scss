@@ -5,8 +5,10 @@ $color-tertiary: #99E2D0;
 
 $shadow: #CCCCCC;
 $dark-bg: #EAEAEA;
+$darker-bg: #333333;
 $light-bg: #f5f5f5;
 
 $btn-bg: $color-primary;
 
 $icon_color: #555555;
+$dark-tertiary: darken($color-tertiary, 45%);

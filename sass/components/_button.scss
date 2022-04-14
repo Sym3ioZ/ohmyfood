@@ -5,6 +5,6 @@
     color: white;
     padding: 15px 20px;
     margin: 25px 0;
-    box-shadow: 5px 5px 10px $shadow, -5px 5px 10px $shadow;
+    @include btn-shadow;
     position: relative;
 }

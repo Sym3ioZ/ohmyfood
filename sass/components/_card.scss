@@ -1,43 +1,39 @@
 .card{
     width: 95%;
     max-width: 400px;
-    margin: 0px auto;
-    position: relative;
+    height: 275px;
+    background: white;
     border-radius: 20px;
-
-    &__link{
-        border-radius: 20px;
+    @include btn-shadow;
+    margin: 10px auto;
+    position: relative;
+    @include desktop{
+        margin: 10px 10px;
     }
-
     &__new-flag{
         position: absolute;
-        top: 0;
-        right: 0;
-        color: #008766;
-        background: #99E2D0;
-        border-radius: 3px;
-        width: fit-content;
+        top: 15px;
+        right: 15px;
+        background: $color-tertiary;
+        color: $dark-tertiary;
+        font-weight: 700;
         padding: 5px 10px;
-        margin: 15px 15px;
-        z-index: 2;
+        border-radius: 3px;
     }
-    &__image{
-        height: 275px;
-        position: relative;
-        overflow: hidden;
+    &__img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
         border-radius: 20px 20px 0 0;
     }
-    &__image img{
-        z-index: 1;
-        width: 150%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
     &__body{
-        background: white;
-        padding: 20px 15px ;
-        border-radius: 0 0 20px 20px;
+        width: fit-content;
+        margin: 10px 15px;
+    }
+    &__heart{
+        position: absolute;
+        bottom: 30px;
+        right: 20px;
+        font-size: x-large;
     }
 }
