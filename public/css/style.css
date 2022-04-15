@@ -21,15 +21,22 @@ h1 {
 }
 
 h4 {
-  font-size: large;
-  font-weight: 300;
-  margin-top: 5px;
+  font-family: "shrikhand", cursive;
+  font-size: 166%;
+  font-weight: 500;
 }
 
 h5 {
   font-family: "Shrikhand", cursive;
   font-size: x-large;
   font-weight: 200;
+}
+
+h6 {
+  font-size: large;
+  font-weight: 400;
+  margin-left: 3px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 900px) {
@@ -75,7 +82,7 @@ li i {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 3px 5px #CCCCCC inset;
+  box-shadow: 0 3px 5px #DFDFDF inset;
 }
 .loc-search form #loc-search {
   margin-left: 5px;
@@ -94,7 +101,7 @@ li i {
   color: white;
   padding: 15px 20px;
   margin: 25px 0;
-  box-shadow: 5px 5px 10px #CCCCCC, -5px 5px 10px #CCCCCC;
+  box-shadow: 5px 5px 10px #DFDFDF, -5px 5px 10px #DFDFDF;
   position: relative;
 }
 
@@ -122,7 +129,7 @@ li i {
   height: 275px;
   background: white;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #CCCCCC, -5px 5px 10px #CCCCCC;
+  box-shadow: 5px 5px 10px #DFDFDF, -5px 5px 10px #DFDFDF;
   margin: 10px auto;
   position: relative;
 }
@@ -151,10 +158,17 @@ li i {
   width: fit-content;
   margin: 10px 15px;
 }
-.card__heart {
+.card__body p {
+  font-size: larger;
+  padding-top: 5px;
+}
+.card .heart-icon {
   position: absolute;
   bottom: 30px;
   right: 20px;
+}
+
+.heart-icon i {
   font-size: x-large;
 }
 
@@ -203,8 +217,61 @@ footer__link {
   }
 }
 
+.menu {
+  background: #f6f6f6;
+}
+.menu__image {
+  width: 100%;
+}
+.menu__body {
+  border-radius: 20px 20px 0 0;
+  margin: 10px 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+.menu__body__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0 25px;
+}
+.menu__body__dishes {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.menu__body__dishes .button {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  background: white;
+  color: black;
+}
+.menu__body__dishes .button h3 {
+  padding: 0px 10px 2px;
+}
+.menu__body__dishes .button .button__subprice {
+  padding: 0px 15px 2px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__body > .button {
+  width: 100%;
+  max-width: 180px;
+  align-self: center;
+  text-align: center;
+}
+
 .presentation {
-  background: #f5f5f5;
+  background: #f6f6f6;
   padding: 20px 40px;
   margin: auto;
   display: flex;
@@ -250,7 +317,7 @@ footer__link {
   justify-content: space-around;
   align-items: center;
   align-self: center;
-  background: #f5f5f5;
+  background: #f6f6f6;
   color: black;
 }
 .usage__buttons .button p {
@@ -263,7 +330,7 @@ footer__link {
 .restaurants {
   display: flex;
   flex-direction: column;
-  background: #f5f5f5;
+  background: #f6f6f6;
   padding-bottom: 50px;
 }
 .restaurants h2 {

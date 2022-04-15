@@ -18,14 +18,20 @@ h1{
     margin: 20px 0;
 }
 h4{
-    font-size: large;
-    font-weight: 300;
-    margin-top: 5px;
+    font-family: 'shrikhand', cursive;
+    font-size: 166%;
+    font-weight: 500;
 }
 h5{
     font-family: 'Shrikhand', cursive;
     font-size: x-large;
     font-weight: 200;
+}
+h6{
+    font-size: large;
+    font-weight: 400;
+    margin-left: 3px;
+    margin-bottom: 10px;
 }
 p{
     @include desktop{

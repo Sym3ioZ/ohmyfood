@@ -30,10 +30,13 @@
         width: fit-content;
         margin: 10px 15px;
     }
-    &__heart{
+    &__body p{
+        font-size: larger;
+        padding-top: 5px;
+    }
+    & .heart-icon{
         position: absolute;
         bottom: 30px;
         right: 20px;
-        font-size: x-large;
     }
 }

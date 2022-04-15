@@ -1,0 +1,52 @@
+.menu{
+    background: $light-bg;
+    &__image{
+        width: 100%;
+    }
+    &__body{
+        border-radius: 20px 20px 0 0;
+        margin: 10px 10px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__body__title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 30px 0 25px;
+    }
+    &__body__dishes{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    &__body__dishes .button{
+        margin: 10px 0;
+        width: 100%;
+        border-radius: 15px;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: center;
+        background: white;
+        color: black;
+    }
+    &__body__dishes .button h3{
+        padding: 0px 10px 2px;
+    }
+    &__body__dishes .button .button__subprice{
+        padding: 0px 15px 2px 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__body > .button{
+        width: 100%;
+        max-width: 180px;
+        align-self: center;
+        text-align: center;
+    }
+}
