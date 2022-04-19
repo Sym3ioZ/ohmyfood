@@ -21,9 +21,15 @@ h1 {
 }
 
 h4 {
-  font-family: "shrikhand", cursive;
-  font-size: 166%;
+  font-family: "Shrikhand", cursive;
+  font-size: 175%;
   font-weight: 500;
+  margin-right: 33px;
+}
+@media screen and (min-width: 900px) {
+  h4 {
+    font-size: 250%;
+  }
 }
 
 h5 {
@@ -32,11 +38,26 @@ h5 {
   font-weight: 200;
 }
 
+@media screen and (min-width: 900px) {
+  h3 {
+    font-size: x-large;
+  }
+}
+
 h6 {
+  width: 45px;
   font-size: large;
   font-weight: 400;
   margin-left: 3px;
   margin-bottom: 10px;
+  border-bottom: 3px solid #99E2D0;
+}
+@media screen and (min-width: 900px) {
+  h6 {
+    width: auto;
+    font-size: xx-large;
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -130,12 +151,12 @@ li i {
   background: white;
   border-radius: 20px;
   box-shadow: 5px 5px 10px #DFDFDF, -5px 5px 10px #DFDFDF;
-  margin: 10px auto;
+  margin: 15px auto;
   position: relative;
 }
 @media screen and (min-width: 900px) {
   .card {
-    margin: 10px 10px;
+    margin: 20px 30px;
   }
 }
 .card__new-flag {
@@ -162,6 +183,11 @@ li i {
   font-size: larger;
   padding-top: 5px;
 }
+@media screen and (min-width: 900px) {
+  .card__body p {
+    font-size: x-large;
+  }
+}
 .card .heart-icon {
   position: absolute;
   bottom: 30px;
@@ -170,6 +196,11 @@ li i {
 
 .heart-icon i {
   font-size: x-large;
+}
+@media screen and (min-width: 900px) {
+  .heart-icon i {
+    font-size: xx-large;
+  }
 }
 
 header {
@@ -215,59 +246,6 @@ footer__link {
     flex-direction: column;
     align-items: center;
   }
-}
-
-.menu {
-  background: #f6f6f6;
-}
-.menu__image {
-  width: 100%;
-}
-.menu__body {
-  border-radius: 20px 20px 0 0;
-  margin: 10px 10px 30px;
-  display: flex;
-  flex-direction: column;
-}
-.menu__body__title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30px 0 25px;
-}
-.menu__body__dishes {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-.menu__body__dishes .button {
-  margin: 10px 0;
-  width: 100%;
-  border-radius: 15px;
-  padding: 10px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  align-self: center;
-  background: white;
-  color: black;
-}
-.menu__body__dishes .button h3 {
-  padding: 0px 10px 2px;
-}
-.menu__body__dishes .button .button__subprice {
-  padding: 0px 15px 2px 10px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.menu__body > .button {
-  width: 100%;
-  max-width: 180px;
-  align-self: center;
-  text-align: center;
 }
 
 .presentation {
@@ -351,5 +329,111 @@ footer__link {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+}
+
+.menu {
+  background: #f6f6f6;
+}
+@media screen and (min-width: 900px) {
+  .menu {
+    position: relative;
+  }
+}
+.menu__image {
+  width: 100%;
+}
+.menu__body {
+  background: #f6f6f6;
+  margin: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 900px) {
+  .menu__body {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    margin: 0;
+  }
+}
+.menu__body__title {
+  background: #f6f6f6;
+  padding: 30px 20px 0px;
+  border-radius: 40px 40px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: -45px 0 25px;
+}
+@media screen and (min-width: 900px) {
+  .menu__body__title {
+    background: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: -1px 0 0;
+    border-radius: 0 0 40px 40px;
+  }
+}
+.menu__body__dishes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 30px;
+}
+@media screen and (min-width: 900px) {
+  .menu__body__dishes {
+    margin-right: 45px;
+  }
+}
+.menu__body__dishes .button {
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  background: white;
+  color: black;
+}
+.menu__body__dishes .button h3 {
+  width: 100%;
+  padding: 0px 10px 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 900px) {
+  .menu__body__dishes .button h3 {
+    font-size: x-large;
+  }
+}
+.menu__body__dishes .button .button__subprice {
+  padding: 0px 15px 2px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu__body__dishes .button .button__subprice p:first-child {
+  margin-right: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menu__body > .button {
+  width: 100%;
+  max-width: 180px;
+  align-self: center;
+  text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .menu__body > .button {
+    position: absolute;
+    bottom: 0;
   }
 }

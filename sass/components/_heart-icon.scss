@@ -1,5 +1,8 @@
 .heart-icon{
     & i{
         font-size: x-large;
+        @include desktop{
+            font-size: xx-large;
+        }
     }
 }

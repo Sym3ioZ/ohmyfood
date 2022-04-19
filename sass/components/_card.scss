@@ -5,10 +5,10 @@
     background: white;
     border-radius: 20px;
     @include btn-shadow;
-    margin: 10px auto;
+    margin: 15px auto;
     position: relative;
     @include desktop{
-        margin: 10px 10px;
+        margin: 20px 30px;
     }
     &__new-flag{
         position: absolute;
@@ -33,6 +33,9 @@
     &__body p{
         font-size: larger;
         padding-top: 5px;
+        @include desktop{
+            font-size: x-large;
+        }
     }
     & .heart-icon{
         position: absolute;
