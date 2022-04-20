@@ -30,7 +30,7 @@
         flex-direction: column;
     }
     &__buttons .button:hover{
-        background: #F5EDFF;
+        background: lighten($color-primary, 33%);
         & i{
             color: $color-primary;
         }

@@ -4,5 +4,9 @@
         @include desktop{
             font-size: xx-large;
         }
+        &:hover{
+            color: $color-primary;
+            cursor: pointer;
+        }
     }
 }

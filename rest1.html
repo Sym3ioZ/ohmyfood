@@ -21,13 +21,14 @@
     <main>
         <section class="menu">         <!-- Main content with photo and the full menu -->
             <img class="menu__image" src="./public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du gout">
+            <div class="menu__arrow"><a href="#starters"><i class="fa-solid fa-circle-arrow-down"></i></a></div>
             <div class="menu__body">
               <div class="menu__body__title">
                 <h4>La palette du goût</h4>
                 <div class="heart-icon"><i class="fa-regular fa-heart"></i></div>     <!-- heart icon as favorite link -->
               </div>
               <div class="menu__body__dishes">
-                <h6>ENTRÉES</h6>
+                <h6 id="starters">ENTRÉES</h6>
                 <div class="button">
                   <h3>Fricassée d'escargots</h3>
                   <div class="button__subprice"><p>Au piment d'espelette</p> <p><b>25€</b></p></div>
@@ -78,7 +79,7 @@
     </main>
 
     <footer>     <!-- Footer indentical on the whole site -->
-      <h5>ohmyfood</h5>
+      <a href="./index.html"><h5>ohmyfood</h5></a>
       <ul class="footer__list">
         <li class="footer__link">
           <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>

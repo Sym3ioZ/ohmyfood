@@ -1,5 +1,5 @@
-@mixin btn-shadow{
-    box-shadow: 5px 5px 10px $shadow, -5px 5px 10px $shadow;
+@mixin btn-shadow($shadow-darkness: $shadow){
+    box-shadow: 5px 5px 10px $shadow-darkness, -5px 5px 10px $shadow-darkness;
 }
 
 @mixin desktop{

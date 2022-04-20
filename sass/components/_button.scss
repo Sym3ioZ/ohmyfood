@@ -7,4 +7,9 @@
     margin: 25px 0;
     @include btn-shadow;
     position: relative;
+    &:hover{
+        cursor: pointer;
+        background: $color-secondary;
+        @include btn-shadow(darken($shadow, 33%));
+    }
 }

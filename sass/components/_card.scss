@@ -7,6 +7,13 @@
     @include btn-shadow;
     margin: 15px auto;
     position: relative;
+    &:hover{
+        @include btn-shadow(darken($shadow, 33%));
+        background: lighten($color-primary, 33%);
+        & h3{
+            color: $color-primary;
+        }
+    }
     @include desktop{
         margin: 20px 30px;
     }
