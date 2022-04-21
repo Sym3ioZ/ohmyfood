@@ -1,32 +1,25 @@
 .menu{
+    display: flex;
+    flex-direction: column;
     @include desktop{
-        position: relative;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0;
     }
     background: $light-bg;
     &__image{
         width: 100%;
-        display: block;
-    }
-    &__arrow{
-        width: 100%;
-        position: absolute;
-        top: 100px;
-        text-align: center;
-        font-size: 400%;
-        & i{
-            color: $dark-tertiary;
-            @include text-shadow;
-            transform: scale(1);
-            transition: all 200ms, color 150ms 50ms;
-            &:hover{
-                transform: scale(1.10);
-                color: $color-tertiary;
-                @include text-shadow(darken($text-shadow, 10%));
-            }
+        & img{
+            overflow: hidden;
+            width: 100%;
         }
-        display: none;
         @include desktop{
-            display: block;
+            width: 50%;
+            & img{
+                width: 100%;
+                overflow: hidden;
+            }
         }
     }
     &__body{
@@ -34,30 +27,42 @@
         margin: 0 0 30px;
         display: flex;
         flex-direction: column;
+        border-radius: 40px 40px 0 0;
         @include desktop{
+            width: 100%;
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
+            padding-top: 30px;
             padding-bottom: 80px;
-            margin: 0;
+            margin: -50px auto 0;
+            border-radius: 40px 40px 0 0;
+            box-shadow: -1px 30px 8px -26px rgba(110, 110, 110, 0.75) inset;
         }
     }
-    &__body__title{
-        background: $light-bg;
-        padding: 30px 20px 0px;
+    &__title{
+        background: white;
+        padding: 20px 20px 0px;
         border-radius: 40px 40px 0 0;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin: -45px 0 25px;
+        margin: -50px 0 25px;
+        border-radius: 40px 40px 0 0;
         @include desktop{
-            background: white;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            margin: -1px 0 0;
-            border-radius: 0 0 40px 40px;
+            flex-direction: column;
+            width: 50%;
+            margin: -1px 0 20px;
+            padding-bottom: 60px;
+        }
+    }
+    &__body__list{
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
         }
     }
     &__body__dishes{
@@ -80,7 +85,10 @@
         background: white;
         color: black;
         &:hover{
-            background: lighten($color-primary, 33%);
+            background: lighten($color-primary, 35%);
+        }
+        @include desktop{
+            width: 400px;
         }
     }
     &__body__dishes .button h3{
@@ -101,19 +109,15 @@
         justify-content: space-between;
     }
     &__body__dishes .button .button__subprice p:first-child{
-            margin-right: 5px;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+        margin-right: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
     &__body > .button{
         width: 100%;
         max-width: 180px;
         align-self: center;
         text-align: center;
-        @include desktop{
-            position: absolute;
-            bottom: 0;
-        }
     }
 }
