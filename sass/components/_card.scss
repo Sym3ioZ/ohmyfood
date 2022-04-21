@@ -1,5 +1,5 @@
 .card{
-    width: 95%;
+    width: 90%;
     max-width: 400px;
     height: 275px;
     background: white;
@@ -9,10 +9,19 @@
     position: relative;
     transform: scale(1);
     transition: all 200ms ease;
+    & a{
+        width: 100%;
+        border-radius: 20px;
+    }
     &:hover{
         transform: scale(1.05);
         @include btn-shadow(darken($shadow, 33%));
-        color: $dark-tertiary;
+        & h3{
+            color: $color-primary;
+        }
+        & p{
+            color: $dark-tertiary;
+        }
     }
     @include desktop{
         margin: 20px 30px;
@@ -37,12 +46,16 @@
         width: fit-content;
         margin: 10px 15px;
     }
+    &__body h3{
+        transition: color 200ms;
+    }
     &__body p{
         font-size: larger;
         padding-top: 5px;
         @include desktop{
             font-size: x-large;
         }
+        transition: color 200ms;
     }
     & .heart-icon{
         position: absolute;

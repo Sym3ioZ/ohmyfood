@@ -2,9 +2,9 @@ footer{
     background: $darker-bg;
     color: white;
     padding: 20px 15px;
-    transition: all 2000ms;
-    & a, & i{
+    & a, & i, & h5{
         color: white;
+        transition: all 100ms;
     }
     & a:hover{
         color: $color-tertiary;
@@ -15,7 +15,7 @@ footer{
             color: $color-primary;
         }
     }
-    &__link{
+    .footer__link{
         display: flex;
         flex-direction: row;
     }

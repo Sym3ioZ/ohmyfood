@@ -15,8 +15,13 @@
         font-size: 400%;
         & i{
             color: $dark-tertiary;
+            @include text-shadow;
+            transform: scale(1);
+            transition: all 200ms, color 150ms 50ms;
             &:hover{
+                transform: scale(1.10);
                 color: $color-tertiary;
+                @include text-shadow(darken($text-shadow, 10%));
             }
         }
         display: none;

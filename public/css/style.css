@@ -151,10 +151,11 @@ li i {
   font-size: larger;
   position: absolute;
   left: 35px;
+  transition: all 150ms 50ms;
 }
 
 .card {
-  width: 95%;
+  width: 90%;
   max-width: 400px;
   height: 275px;
   background: white;
@@ -165,9 +166,18 @@ li i {
   transform: scale(1);
   transition: all 200ms ease;
 }
+.card a {
+  width: 100%;
+  border-radius: 20px;
+}
 .card:hover {
   transform: scale(1.05);
   box-shadow: 5px 5px 10px #8b8b8b, -5px 5px 10px #8b8b8b;
+}
+.card:hover h3 {
+  color: #9356DC;
+}
+.card:hover p {
   color: #217460;
 }
 @media screen and (min-width: 900px) {
@@ -195,9 +205,13 @@ li i {
   width: fit-content;
   margin: 10px 15px;
 }
+.card__body h3 {
+  transition: color 200ms;
+}
 .card__body p {
   font-size: larger;
   padding-top: 5px;
+  transition: color 200ms;
 }
 @media screen and (min-width: 900px) {
   .card__body p {
@@ -231,26 +245,24 @@ header {
   justify-content: center;
   position: relative;
 }
-header a {
+header .header__arrow {
   position: absolute;
   left: 20px;
   align-self: center;
+}
+header .header__arrow i {
+  font-size: x-large;
   transform: scale(1);
   transition: transform 200ms, color 150ms 50ms;
 }
-header a:hover {
-  transform: scale(1.15);
-}
-header a:hover i {
-  color: #9356DC;
-}
-header i {
-  font-size: x-large;
-}
 @media screen and (min-width: 900px) {
-  header i {
+  header .header__arrow i {
     font-size: xx-large;
   }
+}
+header .header__arrow i:hover {
+  transform: scale(1.15);
+  color: #9356DC;
 }
 header img {
   width: 50%;
@@ -260,10 +272,10 @@ footer {
   background: #333333;
   color: white;
   padding: 20px 15px;
-  transition: all 2000ms;
 }
-footer a, footer i {
+footer a, footer i, footer h5 {
   color: white;
+  transition: all 100ms;
 }
 footer a:hover {
   color: #99E2D0;
@@ -274,7 +286,7 @@ footer a:hover i {
 footer a:hover h5 {
   color: #9356DC;
 }
-footer__link {
+footer .footer__link {
   display: flex;
   flex-direction: row;
 }
@@ -393,9 +405,14 @@ footer__link {
 }
 .menu__arrow i {
   color: #217460;
+  text-shadow: 2px 2px 3px #444444, -2px 2px 3px #444444;
+  transform: scale(1);
+  transition: all 200ms, color 150ms 50ms;
 }
 .menu__arrow i:hover {
+  transform: scale(1.1);
   color: #99E2D0;
+  text-shadow: 2px 2px 3px #2b2b2b, -2px 2px 3px #2b2b2b;
 }
 @media screen and (min-width: 900px) {
   .menu__arrow {

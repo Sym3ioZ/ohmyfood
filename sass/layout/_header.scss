@@ -5,21 +5,21 @@ header{
     flex-direction: row;
     justify-content: center;
     position: relative;
-    & a{
+    .header__arrow{
         position: absolute;
         left: 20px;
         align-self: center;
-        transform: scale(1);
-        transition: transform 200ms, color 150ms 50ms;
-        &:hover{
-            transform: scale(1.15);
-            & i{color: $color-primary;}
-        }
-    }
-    & i{
-        font-size: x-large;
-        @include desktop{
+        & i{
+            font-size: x-large;
+            @include desktop{
             font-size: xx-large;
+            }
+            transform: scale(1);
+            transition: transform 200ms, color 150ms 50ms;
+            &:hover{
+            transform: scale(1.15);
+            color: $color-primary;
+            }
         }
     }
     & img{

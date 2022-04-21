@@ -2,6 +2,10 @@
     box-shadow: 5px 5px 10px $shadow-darkness, -5px 5px 10px $shadow-darkness;
 }
 
+@mixin text-shadow($shadow-darkness: $text-shadow){
+    text-shadow: 2px 2px 3px $shadow-darkness, -2px 2px 3px $shadow-darkness;
+}
+
 @mixin desktop{
     @media screen and (min-width: 900px) {@content};
 }
