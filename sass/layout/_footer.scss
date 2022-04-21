@@ -2,6 +2,7 @@ footer{
     background: $darker-bg;
     color: white;
     padding: 20px 15px;
+    transition: all 2000ms;
     & a, & i{
         color: white;
     }

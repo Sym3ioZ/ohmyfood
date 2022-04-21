@@ -29,12 +29,8 @@
         display: flex;
         flex-direction: column;
     }
-    &__buttons .button:hover{
-        background: lighten($color-primary, 33%);
-        & i{
-            color: $color-primary;
-        }
-    }
+
+
     &__buttons .button{
         width: 100%;
         border-radius: 15px;
@@ -52,6 +48,13 @@
         font-weight: 700;
         position: absolute;
         left: 70px;
+    }
+    &__buttons .button:hover{
+        cursor: default;
+        background: lighten($color-primary, 35%);
+        & i{
+            color: $color-primary;
+        }
     }
 }
 

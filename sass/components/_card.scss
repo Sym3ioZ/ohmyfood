@@ -7,12 +7,12 @@
     @include btn-shadow;
     margin: 15px auto;
     position: relative;
+    transform: scale(1);
+    transition: all 200ms ease;
     &:hover{
+        transform: scale(1.05);
         @include btn-shadow(darken($shadow, 33%));
-        background: lighten($color-primary, 33%);
-        & h3{
-            color: $color-primary;
-        }
+        color: $dark-tertiary;
     }
     @include desktop{
         margin: 20px 30px;

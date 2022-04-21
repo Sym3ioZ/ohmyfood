@@ -9,6 +9,7 @@ $darker-bg: #333333;
 $light-bg: #f6f6f6;
 
 $btn-bg: $color-primary;
+$btn-gradient: linear-gradient(to top left, $color-primary, $color-secondary);
 
 $icon_color: #555555;
 $dark-tertiary: darken($color-tertiary, 45%);

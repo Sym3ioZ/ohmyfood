@@ -1,15 +1,19 @@
 .button{
     max-width: 400px;
-    background: $btn-bg;
+    background: $btn-gradient;
+    opacity: 1;
     border-radius: 9999px;
     color: white;
     padding: 15px 20px;
     margin: 25px 0;
     @include btn-shadow;
+    cursor: pointer;
     position: relative;
-    &:hover{
-        cursor: pointer;
-        background: $color-secondary;
+    transform: scale(1);
+    transition: all 200ms ease;
+    &:hover{        
+        transform: scale(1.05);
+        opacity: 0.85;
         @include btn-shadow(darken($shadow, 33%));
     }
 }

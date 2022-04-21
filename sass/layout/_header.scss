@@ -9,6 +9,12 @@ header{
         position: absolute;
         left: 20px;
         align-self: center;
+        transform: scale(1);
+        transition: transform 200ms, color 150ms 50ms;
+        &:hover{
+            transform: scale(1.15);
+            & i{color: $color-primary;}
+        }
     }
     & i{
         font-size: x-large;
