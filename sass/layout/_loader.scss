@@ -1,0 +1,38 @@
+.loader{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 200%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 66px;
+    opacity: 1;
+    animation: loader-fade 2000ms 3100ms linear both;
+    &__logo{
+        margin: 0 auto;
+        width: 20%;
+        & img{
+            width: 100%;
+            object-fit: cover;
+        }
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(0deg);
+        animation: loader 1500ms 600ms linear both 3;
+    }
+    & p{
+        font-family: 'Shrikhand';
+        font-size: x-large;
+        text-align: center;
+        @include desktop{
+        font-size: xx-large;
+        }
+        padding-top: 50px;
+        opacity: 0;
+        animation: loader-text-fade 800ms 500ms linear both;
+    }
+}

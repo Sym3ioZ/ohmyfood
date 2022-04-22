@@ -1,3 +1,35 @@
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-fade {
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+  80% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    z-index: -99;
+  }
+}
+@keyframes loader-text-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -130,7 +162,7 @@ li i {
   transition: all 200ms ease;
 }
 .button:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   opacity: 0.85;
   box-shadow: 5px 5px 10px #8b8b8b, -5px 5px 10px #8b8b8b;
 }
@@ -171,7 +203,7 @@ li i {
   border-radius: 20px;
 }
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 5px 5px 10px #8b8b8b, -5px 5px 10px #8b8b8b;
 }
 .card:hover h3 {
@@ -225,7 +257,9 @@ li i {
 }
 
 .heart-icon i {
+  cursor: pointer;
   font-size: x-large;
+  transition: all 200ms;
 }
 @media screen and (min-width: 900px) {
   .heart-icon i {
@@ -234,7 +268,47 @@ li i {
 }
 .heart-icon i:hover {
   color: #9356DC;
-  cursor: pointer;
+}
+
+.loader {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  height: 200%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 66px;
+  opacity: 1;
+  animation: loader-fade 2000ms 3100ms linear both;
+}
+.loader__logo {
+  margin: 0 auto;
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0deg);
+  animation: loader 1500ms 600ms linear both 3;
+}
+.loader__logo img {
+  width: 100%;
+  object-fit: cover;
+}
+.loader p {
+  font-family: "Shrikhand";
+  font-size: x-large;
+  text-align: center;
+  padding-top: 50px;
+  opacity: 0;
+  animation: loader-text-fade 800ms 500ms linear both;
+}
+@media screen and (min-width: 900px) {
+  .loader p {
+    font-size: xx-large;
+  }
 }
 
 header {
@@ -386,7 +460,6 @@ footer .footer__link {
 .menu {
   display: flex;
   flex-direction: column;
-  background: #f6f6f6;
 }
 @media screen and (min-width: 900px) {
   .menu {
@@ -433,7 +506,7 @@ footer .footer__link {
   }
 }
 .menu__title {
-  background: white;
+  background: #f6f6f6;
   padding: 20px 20px 0px;
   border-radius: 40px 40px 0 0;
   display: flex;
@@ -447,8 +520,14 @@ footer .footer__link {
   .menu__title {
     flex-direction: column;
     width: 50%;
-    margin: -1px 0 20px;
-    padding-bottom: 60px;
+    margin: 0 0 20px;
+    padding-bottom: 150px;
+    border-radius: 0 40px 0 0;
+    box-shadow: -1px 30px 8px -26px rgba(110, 110, 110, 0.75) inset;
+  }
+  .menu__title i {
+    font-size: 350%;
+    margin-top: 50px;
   }
 }
 @media screen and (min-width: 900px) {

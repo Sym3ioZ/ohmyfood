@@ -7,7 +7,6 @@
         justify-content: space-between;
         margin: 0;
     }
-    background: $light-bg;
     &__image{
         width: 100%;
         & img{
@@ -41,7 +40,7 @@
         }
     }
     &__title{
-        background: white;
+        background: $light-bg;
         padding: 20px 20px 0px;
         border-radius: 40px 40px 0 0;
         display: flex;
@@ -53,8 +52,14 @@
         @include desktop{
             flex-direction: column;
             width: 50%;
-            margin: -1px 0 20px;
-            padding-bottom: 60px;
+            margin: 0 0 20px;
+            padding-bottom: 150px;
+            border-radius: 0 40px 0 0;
+            box-shadow: -1px 30px 8px -26px rgba(110, 110, 110, 0.75) inset;
+            & i{
+                font-size: 350%;
+                margin-top: 50px;
+            }
         }
     }
     &__body__list{

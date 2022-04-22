@@ -14,7 +14,7 @@
         border-radius: 20px;
     }
     &:hover{
-        transform: scale(1.05);
+        transform: scale(1.02);
         @include btn-shadow(darken($shadow, 33%));
         & h3{
             color: $color-primary;

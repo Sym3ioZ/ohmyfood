@@ -1,12 +1,13 @@
 .heart-icon{
     & i{
+        cursor: pointer;
         font-size: x-large;
+        transition: all 200ms;
         @include desktop{
             font-size: xx-large;
         }
         &:hover{
             color: $color-primary;
-            cursor: pointer;
         }
     }
 }
