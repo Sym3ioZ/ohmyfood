@@ -1,6 +1,7 @@
 .menu{
     display: flex;
     flex-direction: column;
+    background: $light-bg;
     @include desktop{
         flex-direction: row;
         flex-wrap: wrap;
@@ -49,6 +50,7 @@
         align-items: center;
         margin: -50px 0 25px;
         border-radius: 40px 40px 0 0;
+        background: $light-bg;
         @include desktop{
             flex-direction: column;
             width: 50%;
@@ -74,6 +76,14 @@
         display: flex;
         flex-direction: column;
         margin: 0 10px 30px;
+        transform: translateX(0px);
+        opacity: 1;
+        animation: body-dishes-fade-right 1200ms ease both;
+        // @for $i from 1 through 3{
+        //     &:nth-child(#{$i}){
+        //         animation-delay: 250ms * $i;
+        //     }
+        // }
         @include desktop{
             margin-right: 45px;
         }
@@ -87,8 +97,16 @@
         flex-direction: column;
         align-items: flex-start;
         align-self: center;
-        background: white;
+        background: $light-bg;
         color: black;
+        transform: translateY(0px);
+        opacity: 1;
+        animation: body-dishes-fade 1000ms ease both;
+        @for $i from 2 through 4{
+            &:nth-child(#{$i}) {
+                animation-delay: 180ms * $i;
+            }
+        }
         &:hover{
             background: lighten($color-primary, 35%);
         }
