@@ -9,7 +9,7 @@
     @include btn-shadow;
     cursor: pointer;
     position: relative;
-    transform: scale(1);
+    transform: scale(1) translateY(0);
     transition: all 200ms ease;
     &:hover{        
         transform: scale(1.02);

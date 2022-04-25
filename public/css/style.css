@@ -50,6 +50,14 @@
     transform: translateX(0px);
   }
 }
+@keyframes title-loader {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -178,7 +186,7 @@ li i {
   box-shadow: 5px 5px 10px #DFDFDF, -5px 5px 10px #DFDFDF;
   cursor: pointer;
   position: relative;
-  transform: scale(1);
+  transform: scale(1) translateY(0);
   transition: all 200ms ease;
 }
 .button:hover {
@@ -511,6 +519,7 @@ footer .footer__link {
   margin: 0 0 30px;
   display: flex;
   flex-direction: column;
+  z-index: 3;
   border-radius: 40px 40px 0 0;
 }
 @media screen and (min-width: 900px) {
@@ -537,6 +546,9 @@ footer .footer__link {
   margin: -50px 0 25px;
   border-radius: 40px 40px 0 0;
   background: #f6f6f6;
+  opacity: 1;
+  z-index: 2;
+  animation: title-loader 1000ms 250ms ease both;
 }
 @media screen and (min-width: 900px) {
   .menu__title {
@@ -550,6 +562,8 @@ footer .footer__link {
   .menu__title i {
     font-size: 350%;
     margin-top: 50px;
+    opacity: 1;
+    animation: title-loader 1000ms 500ms ease both;
   }
 }
 @media screen and (min-width: 900px) {
@@ -578,14 +592,14 @@ footer .footer__link {
   width: 100%;
   border-radius: 15px;
   padding: 10px 0;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   align-self: center;
   background: #f6f6f6;
   color: black;
-  transform: translateY(0px);
-  opacity: 1;
   animation: body-dishes-fade 1000ms ease both;
 }
 .menu__body__dishes .button:nth-child(2) {
@@ -600,10 +614,39 @@ footer .footer__link {
 .menu__body__dishes .button:hover {
   background: #f2eafb;
 }
+.menu__body__dishes .button:hover .button__subprice, .menu__body__dishes .button:hover h3 {
+  width: 80%;
+}
+.menu__body__dishes .button:hover .button__check {
+  transform: translateX(-100%);
+}
+.menu__body__dishes .button:hover .button__check i {
+  transform: rotate(360deg) scale(1.1);
+}
 @media screen and (min-width: 900px) {
   .menu__body__dishes .button {
     width: 400px;
   }
+}
+.menu__body__dishes .button__check {
+  color: white;
+  height: 100%;
+  width: 20%;
+  margin-top: -10px;
+  background: #99E2D0;
+  overflow: hidden;
+  position: absolute;
+  right: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+}
+.menu__body__dishes .button__check i {
+  color: white;
+  font-size: x-large;
+  transform: rotate(0deg) scale(0.9);
+  transition: all 300ms 50ms ease;
 }
 .menu__body__dishes .button h3 {
   width: 100%;
@@ -611,6 +654,7 @@ footer .footer__link {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  transition: all 200ms ease;
 }
 @media screen and (min-width: 900px) {
   .menu__body__dishes .button h3 {
@@ -623,6 +667,7 @@ footer .footer__link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transition: all 200ms ease;
 }
 .menu__body__dishes .button .button__subprice p:first-child {
   margin-right: 5px;
