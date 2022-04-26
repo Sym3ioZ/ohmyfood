@@ -1,13 +1,39 @@
 .heart-icon{
-    & i{
-        cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    @include desktop{
+        width: 32px;
+        height: 32px;
+    }
+    & .fa-solid, & .fa-regular{
+        position: absolute;
+        top: 0;
         font-size: x-large;
-        transition: color 100ms;
         @include desktop{
             font-size: xx-large;
         }
-        &:hover{
-            color: $color-primary;
+    }
+    & .fa-solid{
+        opacity: 1;
+        background: $btn-gradient;
+        z-index: 5;
+        -webkit-background-clip:  text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform-origin: bottom;
+        transform: scale(1,0) rotateY(90deg);
+      }
+    & .fa-regular{
+        z-index: 1;
+        background: $light-bg;
+        -webkit-background-clip:  text;
+        background-clip: text;
+    }
+    &:hover{
+        cursor: pointer;
+        & .fa-solid{
+            animation: heart-fill 400ms 0ms ease-in-out both;
         }
     }
 }

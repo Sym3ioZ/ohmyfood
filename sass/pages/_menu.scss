@@ -56,16 +56,16 @@
             z-index: 2;
             animation: title-loader 1000ms 250ms ease both;
         }
-        & i{
+        & i:last-child{
             opacity: 1;
             z-index: 2;
             animation: title-loader 1000ms 650ms ease both;
         }
         @include desktop{
             margin: -100px 0 25px;
-            padding: 20px 20px 20px 20px;
-            & i{
-                font-size: 350%;
+            padding: 20px 20px 30px 20px;
+            & .fa-regular, & .fa-solid{
+                font-size: 300%;
             }
         }
     }

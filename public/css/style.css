@@ -58,6 +58,23 @@
     opacity: 1;
   }
 }
+@keyframes heart-fill {
+  0% {
+    transform: scale(1, 0) rotateY(90deg);
+  }
+  5% {
+    transform: scale(1, 0.15) rotateY(90deg);
+  }
+  90% {
+    transform: scale(1.08, 1.08) rotateY(0deg);
+  }
+  95% {
+    transform: scale(1.06, 1.06) rotateY(0deg);
+  }
+  100% {
+    transform: scale(1.02, 1.02) rotateY(0deg);
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -288,18 +305,48 @@ li i {
   right: 20px;
 }
 
-.heart-icon i {
-  cursor: pointer;
-  font-size: x-large;
-  transition: color 100ms;
+.heart-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
 }
 @media screen and (min-width: 900px) {
-  .heart-icon i {
+  .heart-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+.heart-icon .fa-solid, .heart-icon .fa-regular {
+  position: absolute;
+  top: 0;
+  font-size: x-large;
+}
+@media screen and (min-width: 900px) {
+  .heart-icon .fa-solid, .heart-icon .fa-regular {
     font-size: xx-large;
   }
 }
-.heart-icon i:hover {
-  color: #9356DC;
+.heart-icon .fa-solid {
+  opacity: 1;
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  z-index: 5;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform-origin: bottom;
+  transform: scale(1, 0) rotateY(90deg);
+}
+.heart-icon .fa-regular {
+  z-index: 1;
+  background: #f6f6f6;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.heart-icon:hover {
+  cursor: pointer;
+}
+.heart-icon:hover .fa-solid {
+  animation: heart-fill 400ms 0ms ease-in-out both;
 }
 
 .loader {
@@ -561,7 +608,7 @@ footer .footer__link {
   z-index: 2;
   animation: title-loader 1000ms 250ms ease both;
 }
-.menu__title i {
+.menu__title i:last-child {
   opacity: 1;
   z-index: 2;
   animation: title-loader 1000ms 650ms ease both;
@@ -569,10 +616,10 @@ footer .footer__link {
 @media screen and (min-width: 900px) {
   .menu__title {
     margin: -100px 0 25px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px 20px 30px 20px;
   }
-  .menu__title i {
-    font-size: 350%;
+  .menu__title .fa-regular, .menu__title .fa-solid {
+    font-size: 300%;
   }
 }
 @media screen and (min-width: 900px) {
