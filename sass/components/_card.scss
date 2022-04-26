@@ -58,8 +58,12 @@
         transition: color 200ms;
     }
     & .heart-icon{
+        @include desktop{
+            width: 32px;
+            height: 32px;
+        }
         position: absolute;
         bottom: 30px;
-        right: 20px;
+        right: 30px;
     }
 }

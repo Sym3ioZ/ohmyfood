@@ -3,12 +3,20 @@
     height: 24px;
     position: relative;
     @include desktop{
-        width: 32px;
-        height: 32px;
+        width: 48px;
+        height: 48px;
     }
-    & .fa-solid, & .fa-regular{
+    & .fa-regular{
         position: absolute;
         top: 0;
+        font-size: x-large;
+        @include desktop{
+            font-size: xx-large;
+        }
+    }
+    & .fa-solid{
+        position: absolute;
+        top: 1;
         font-size: x-large;
         @include desktop{
             font-size: xx-large;

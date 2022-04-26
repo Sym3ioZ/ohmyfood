@@ -1,16 +1,32 @@
 .loader{
-    position: absolute;
+    position: fixed;
     z-index: 99;
     width: 100%;
-    height: 200%;
+    height: 1500px;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 66px;
+    padding-top: 20px;
     opacity: 1;
     animation: loader-fade 1000ms 1600ms linear both;
     &__logo{
+        width: 50%;
+        margin: 0 auto 66px;
+        & img{
+            width: 100%;
+        }
+        &__revealer{
+            width: 100%;
+            height: 100%;
+            background: white;
+            position: absolute;
+            left: 0;
+            transform: translateX(0);
+            animation: loader-revealer-slide 2600ms linear both;
+        }
+    }
+    &__spin{
         margin: 0 auto;
         width: 20%;
         & img{
@@ -21,8 +37,9 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        opacity: 0;
         transform: rotate(0deg);
-        animation: loader 800ms 200ms linear both 3;
+        animation: loader 2400ms 200ms linear both;
     }
     & p{
         font-family: 'Shrikhand';

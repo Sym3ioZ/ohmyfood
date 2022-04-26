@@ -1,9 +1,15 @@
 @keyframes loader{
     0%{
         transform: rotate(0deg);
+        opacity: 0;
+    }
+    15%{
+        transform: rotate(162deg);
+        opacity: 1;
     }
     100%{
-        transform: rotate(360deg);
+        transform: rotate(1080deg);
+        opacity: 1;
     }
 }
 
@@ -30,6 +36,15 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+@keyframes loader-revealer-slide{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100%);
     }
 }
 
@@ -72,12 +87,12 @@
         transform: scale(1,0.15) rotateY(90deg);
     }
     90%{
-        transform: scale(1.08,1.08) rotateY(0deg);
+        transform: scale(1.10,1.10) rotateY(0deg);
     }
     95%{
-        transform: scale(1.06,1.06) rotateY(0deg);
+        transform: scale(1.07,1.07) rotateY(0deg);
     }
     100%{
-        transform: scale(1.02,1.02) rotateY(0deg);
+        transform: scale(1.03,1.03) rotateY(0deg);
     }
 }
