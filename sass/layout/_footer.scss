@@ -4,7 +4,7 @@ footer{
     padding: 20px 15px;
     & a, & i, & h5{
         color: white;
-        transition: all 100ms;
+        transition: all 100ms ease;
     }
     & a:hover{
         color: $color-tertiary;

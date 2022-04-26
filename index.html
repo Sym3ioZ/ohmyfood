@@ -14,7 +14,7 @@
 
   <body>
     
-    <header>
+    <header id="head">
       <img src="./public/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood" /> <!-- Header logo only on index -->
     </header>
     <div class="loader">
@@ -26,7 +26,7 @@
     <div class="loc-search">              <!-- Localization to be a form search -->
       <i class="fa-solid fa-map-marker-alt"></i>
       <form method="post" action="#">
-        <input type="search" id="loc-search" name="loc-search" size="15" minlength="3" maxlength="15" value="Paris, Belleville">
+        <input type="search" id="loc-search" name="loc-search" size="20" minlength="3" maxlength="20" value="Paris, Belleville">
       </form>
     </div>
     <main>
@@ -105,7 +105,7 @@
     </main>
 
     <footer>              <!-- Footer with classic links and a mailto link -->
-      <a href="./index.html"><h5>ohmyfood</h5></a>
+      <a href="#head"><h5>ohmyfood</h5></a>
       <ul class="footer__list">
         <li class="footer__link">
           <a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>

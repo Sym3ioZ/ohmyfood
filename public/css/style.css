@@ -65,6 +65,10 @@
   list-style: none;
 }
 
+body {
+  background: #333333;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -169,7 +173,7 @@ li i {
   margin-left: 5px;
   height: 35px;
   border: 0 hidden;
-  text-align: right;
+  text-align: center;
   background: #EAEAEA;
   font-size: large;
   font-weight: 500;
@@ -287,7 +291,7 @@ li i {
 .heart-icon i {
   cursor: pointer;
   font-size: x-large;
-  transition: all 200ms;
+  transition: color 100ms;
 }
 @media screen and (min-width: 900px) {
   .heart-icon i {
@@ -309,7 +313,7 @@ li i {
   align-items: center;
   padding-top: 66px;
   opacity: 1;
-  animation: loader-fade 2000ms 3100ms linear both;
+  animation: loader-fade 1000ms 1600ms linear both;
 }
 .loader__logo {
   margin: 0 auto;
@@ -319,7 +323,7 @@ li i {
   justify-content: center;
   align-items: center;
   transform: rotate(0deg);
-  animation: loader 1500ms 600ms linear both 3;
+  animation: loader 800ms 200ms linear both 3;
 }
 .loader__logo img {
   width: 100%;
@@ -342,6 +346,7 @@ li i {
 header {
   padding-top: 20px;
   padding-bottom: 10px;
+  background: white;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -355,7 +360,7 @@ header .header__arrow {
 header .header__arrow i {
   font-size: x-large;
   transform: scale(1);
-  transition: transform 200ms, color 150ms 50ms;
+  transition: transform 100ms ease, color 50ms 50ms ease;
 }
 @media screen and (min-width: 900px) {
   header .header__arrow i {
@@ -369,6 +374,11 @@ header .header__arrow i:hover {
 header img {
   width: 50%;
 }
+@media screen and (min-width: 900px) {
+  header {
+    z-index: 2;
+  }
+}
 
 footer {
   background: #333333;
@@ -377,7 +387,7 @@ footer {
 }
 footer a, footer i, footer h5 {
   color: white;
-  transition: all 100ms;
+  transition: all 100ms ease;
 }
 footer a:hover {
   color: #99E2D0;
@@ -418,6 +428,7 @@ footer .footer__link {
 
 .usage {
   padding: 20px 20px;
+  background: white;
   display: flex;
   flex-direction: column;
 }
@@ -500,21 +511,21 @@ footer .footer__link {
 }
 .menu__image {
   width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .menu__image img {
-  overflow: hidden;
   width: 100%;
 }
 @media screen and (min-width: 900px) {
   .menu__image {
-    width: 50%;
-  }
-  .menu__image img {
-    width: 100%;
-    overflow: hidden;
+    height: 500px;
   }
 }
 .menu__body {
+  position: relative;
   background: #f6f6f6;
   margin: 0 0 30px;
   display: flex;
@@ -531,11 +542,10 @@ footer .footer__link {
     padding-top: 30px;
     padding-bottom: 80px;
     margin: -50px auto 0;
-    border-radius: 40px 40px 0 0;
-    box-shadow: -1px 30px 8px -26px rgba(110, 110, 110, 0.75) inset;
   }
 }
 .menu__title {
+  width: 100%;
   background: #f6f6f6;
   padding: 20px 20px 0px;
   border-radius: 40px 40px 0 0;
@@ -544,26 +554,25 @@ footer .footer__link {
   justify-content: center;
   align-items: center;
   margin: -50px 0 25px;
-  border-radius: 40px 40px 0 0;
   background: #f6f6f6;
+}
+.menu__title h4 {
   opacity: 1;
   z-index: 2;
   animation: title-loader 1000ms 250ms ease both;
 }
+.menu__title i {
+  opacity: 1;
+  z-index: 2;
+  animation: title-loader 1000ms 650ms ease both;
+}
 @media screen and (min-width: 900px) {
   .menu__title {
-    flex-direction: column;
-    width: 50%;
-    margin: 0 0 20px;
-    padding-bottom: 150px;
-    border-radius: 0 40px 0 0;
-    box-shadow: -1px 30px 8px -26px rgba(110, 110, 110, 0.75) inset;
+    margin: -100px 0 25px;
+    padding: 20px 20px 20px 20px;
   }
   .menu__title i {
     font-size: 350%;
-    margin-top: 50px;
-    opacity: 1;
-    animation: title-loader 1000ms 500ms ease both;
   }
 }
 @media screen and (min-width: 900px) {
@@ -584,7 +593,7 @@ footer .footer__link {
 }
 @media screen and (min-width: 900px) {
   .menu__body__dishes {
-    margin-right: 45px;
+    margin: 10px 25px 50px 25px;
   }
 }
 .menu__body__dishes .button {
@@ -680,4 +689,10 @@ footer .footer__link {
   max-width: 180px;
   align-self: center;
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  .menu__body > .button {
+    position: absolute;
+    bottom: 10px;
+  }
 }

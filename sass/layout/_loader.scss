@@ -9,7 +9,7 @@
     align-items: center;
     padding-top: 66px;
     opacity: 1;
-    animation: loader-fade 2000ms 3100ms linear both;
+    animation: loader-fade 1000ms 1600ms linear both;
     &__logo{
         margin: 0 auto;
         width: 20%;
@@ -22,7 +22,7 @@
         justify-content: center;
         align-items: center;
         transform: rotate(0deg);
-        animation: loader 1500ms 600ms linear both 3;
+        animation: loader 800ms 200ms linear both 3;
     }
     & p{
         font-family: 'Shrikhand';

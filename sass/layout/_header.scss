@@ -1,13 +1,11 @@
 header{
     padding-top: 20px;
     padding-bottom: 10px;
+    background: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
-    @include desktop{
-        // box-shadow:0 3px 5px darken($shadow, 20%);
-    }
     .header__arrow{
         position: absolute;
         left: 20px;
@@ -18,7 +16,7 @@ header{
             font-size: xx-large;
             }
             transform: scale(1);
-            transition: transform 200ms, color 150ms 50ms;
+            transition: transform 100ms ease, color 50ms 50ms ease;
             &:hover{
             transform: scale(1.15);
             color: $color-primary;
@@ -27,5 +25,8 @@ header{
     }
     & img{
         width: 50%;
+    }
+    @include desktop{
+        z-index: 2;
     }
 }

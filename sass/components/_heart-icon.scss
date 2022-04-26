@@ -2,7 +2,7 @@
     & i{
         cursor: pointer;
         font-size: x-large;
-        transition: all 200ms;
+        transition: color 100ms;
         @include desktop{
             font-size: xx-large;
         }
