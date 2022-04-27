@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: column;
     background: $light-bg;
+    position: relative;
     &__image{
         width: 100%;
         height: 300px;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         & img{
             width: 100%;
+            height: 300px;
             object-fit: cover;
         }
         @include desktop{
             height: 500px;
+            & img{
+                height: 500px;
+            }
             
         }
     }
