@@ -595,16 +595,9 @@ footer .footer__link {
   flex-direction: column;
   background: #f6f6f6;
 }
-@media screen and (min-width: 900px) {
-  .menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0;
-  }
-}
 .menu__image {
   width: 100%;
+  height: 300px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -612,6 +605,7 @@ footer .footer__link {
 }
 .menu__image img {
   width: 100%;
+  object-fit: cover;
 }
 @media screen and (min-width: 900px) {
   .menu__image {
@@ -682,14 +676,70 @@ footer .footer__link {
   display: flex;
   flex-direction: column;
   margin: 0 10px 30px;
-  transform: translateX(0px);
-  opacity: 1;
-  animation: body-dishes-fade-right 1200ms ease both;
 }
 @media screen and (min-width: 900px) {
   .menu__body__dishes {
     margin: 10px 25px 50px 25px;
   }
+}
+.menu__body__dishes h6 {
+  transform: translateX(0px);
+  opacity: 1;
+  animation: body-dishes-fade-right 1200ms ease both;
+}
+.menu__body__dishes:nth-child(1) h6 {
+  animation-delay: 250ms;
+}
+.menu__body__dishes:nth-child(1) .button {
+  animation: body-dishes-fade 1000ms ease both;
+}
+.menu__body__dishes:nth-child(1) .button:nth-child(2) {
+  animation-delay: 375ms;
+}
+.menu__body__dishes:nth-child(1) .button:nth-child(3) {
+  animation-delay: 500ms;
+}
+.menu__body__dishes:nth-child(1) .button:nth-child(4) {
+  animation-delay: 625ms;
+}
+.menu__body__dishes:nth-child(1) .button:nth-child(5) {
+  animation-delay: 750ms;
+}
+.menu__body__dishes:nth-child(2) h6 {
+  animation-delay: 500ms;
+}
+.menu__body__dishes:nth-child(2) .button {
+  animation: body-dishes-fade 1000ms ease both;
+}
+.menu__body__dishes:nth-child(2) .button:nth-child(2) {
+  animation-delay: 500ms;
+}
+.menu__body__dishes:nth-child(2) .button:nth-child(3) {
+  animation-delay: 625ms;
+}
+.menu__body__dishes:nth-child(2) .button:nth-child(4) {
+  animation-delay: 750ms;
+}
+.menu__body__dishes:nth-child(2) .button:nth-child(5) {
+  animation-delay: 875ms;
+}
+.menu__body__dishes:nth-child(3) h6 {
+  animation-delay: 750ms;
+}
+.menu__body__dishes:nth-child(3) .button {
+  animation: body-dishes-fade 1000ms ease both;
+}
+.menu__body__dishes:nth-child(3) .button:nth-child(2) {
+  animation-delay: 625ms;
+}
+.menu__body__dishes:nth-child(3) .button:nth-child(3) {
+  animation-delay: 750ms;
+}
+.menu__body__dishes:nth-child(3) .button:nth-child(4) {
+  animation-delay: 875ms;
+}
+.menu__body__dishes:nth-child(3) .button:nth-child(5) {
+  animation-delay: 1000ms;
 }
 .menu__body__dishes .button {
   margin: 10px 0;
@@ -704,19 +754,6 @@ footer .footer__link {
   align-self: center;
   background: #f6f6f6;
   color: black;
-  animation: body-dishes-fade 1000ms ease both;
-}
-.menu__body__dishes .button:nth-child(2) {
-  animation-delay: 360ms;
-}
-.menu__body__dishes .button:nth-child(3) {
-  animation-delay: 540ms;
-}
-.menu__body__dishes .button:nth-child(4) {
-  animation-delay: 720ms;
-}
-.menu__body__dishes .button:nth-child(5) {
-  animation-delay: 900ms;
 }
 .menu__body__dishes .button:hover {
   background: #f2eafb;
