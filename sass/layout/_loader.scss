@@ -9,7 +9,7 @@
     align-items: center;
     padding-top: 20px;
     opacity: 1;
-    animation: loader-fade 1000ms 1600ms linear both;
+    animation: loader-fade 1500ms 2000ms linear both;
     &__logo{
         width: 50%;
         margin: 0 auto 66px;
@@ -23,27 +23,54 @@
             position: absolute;
             left: 0;
             transform: translateX(0);
-            animation: loader-revealer-slide 2600ms linear both;
+            animation: loader-revealer-slide 3000ms linear both;
         }
     }
     &__spin{
-        margin: 0 auto;
-        width: 20%;
-        & img{
-            width: 100%;
-            object-fit: cover;
-        }
+        width: 70%;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transform: rotate(0deg);
-        animation: loader 2400ms 200ms linear both;
+        justify-content: space-around;
+    }
+    &__spin__circles{
+        position: relative;
+          width: 66px;
+          height: 66px;
+          @include desktop{
+              width: 100px;
+              height: 100px;
+          }
+          & div{
+            width: 0%;
+            height: 0%;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            border: 3px solid $color-primary;
+            animation: loader-spins 1500ms linear both infinite;
+            @for $i from 1 through 5{
+                &:nth-child(#{$i}){
+                    animation-delay: 300ms * $i - random($limit: 200);
+                }
+            }
+          }
+        &:nth-child(2){
+            & div{
+                border: 3px solid $dark-tertiary;
+            }
+        }
+        &:nth-child(3){
+            & div{
+                border: 3px solid $color-secondary;
+            }
+        }
+
     }
     & p{
         font-family: 'Shrikhand';
-        font-size: x-large;
+        font-size: larger;
         text-align: center;
         @include desktop{
         font-size: xx-large;
