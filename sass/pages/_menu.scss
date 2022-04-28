@@ -1,3 +1,4 @@
+/* rules established for restaurants' pages specifically */
 .menu{
     display: flex;
     flex-direction: column;
@@ -88,7 +89,7 @@
             opacity: 1;
             animation: body-dishes-fade-right 1200ms ease both;
         }
-        @for $i from 1 through 3{
+        @for $i from 1 through 3{                 /* making dishes titles and buttons appearing with delays */
             &:nth-child(#{$i}) {
                 & h6{
                     animation-delay: 250ms * $i;
@@ -117,18 +118,11 @@
         align-self: center;
         background: $light-bg;
         color: black;
-        // animation: body-dishes-fade 1000ms ease both;
-        // @for $i from 2 through 5{
-        //     &:nth-child(#{$i}) {
-        //         animation-delay: 180ms * $i;
-        //     }
-        // }
         &:hover{
-            background: lighten($color-primary, 35%);
             & .button__subprice, & h3{
                     width: 80%;
             }
-            & .button__check{
+            & .button__check{                              /* check box appearing with tick rotation on hover */
                 transform: translateX(-100%);
                 & i{
                     transform: rotate(360deg) scale(1.1);
@@ -145,7 +139,7 @@
             margin-top: -10px;
             background: $color-tertiary;
             overflow: hidden;
-            position: absolute;
+            position: absolute;              /* check block invisible on right of the button, waiting for hover to appear, see above*/
             right: -20%;
             display: flex;
             justify-content: center;

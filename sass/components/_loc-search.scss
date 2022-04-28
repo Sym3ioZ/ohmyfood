@@ -1,13 +1,17 @@
 .loc-search{
     height: 50px;
-    padding: 5px 0 5px 0;
+    padding: 5px 0 5px 20px;
     background: $dark-bg;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     box-shadow:0 3px 5px $shadow inset;
-    & form #loc-search{
+    & form #loc-search{                  /* form field for desktop */
+        display: none;
+        @include desktop{
+            display: block;
+        }
         margin-left: 5px;
         height: 35px;
         border: 0 hidden;
@@ -15,5 +19,18 @@
         background: $dark-bg;
         font-size: large;
         font-weight: 500;
+    }
+    & form #loc-search-m{              /* form field for mobile */
+        display: block;
+        margin-left: 5px;
+        height: 35px;
+        border: 0 hidden;
+        text-align: center;
+        background: $dark-bg;
+        font-size: large;
+        font-weight: 500;
+        @include desktop{
+            display: none;
+        }
     }
 }

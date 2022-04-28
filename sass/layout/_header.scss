@@ -6,7 +6,7 @@ header{
     flex-direction: row;
     justify-content: center;
     position: relative;
-    .header__arrow{
+    .header__arrow{                      /* link to index, only on restaurants' pages */
         position: absolute;
         left: 20px;
         align-self: center;

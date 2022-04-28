@@ -13,10 +13,10 @@
   </head>
 
   <body>
-    <div class="loader">
+    <div class="loader">        <!-- Loading spinner -->
       <div class="loader__logo">
         <div class="loader__logo__revealer"></div>
-        <img src="./public/img/logo/ohmyfood@2x.svg" />
+        <img src="./public/img/logo/ohmyfood@2x.svg" alt="logo ohmyfood"/>
       </div>
       <div class="loader__spin">
         <img src="./public/img/logo/loader-logo.png" alt="loading logo fork and knife">
@@ -29,8 +29,11 @@
     </header>
     <div class="loc-search">              <!-- Localization to be a form search -->
       <i class="fa-solid fa-map-marker-alt"></i>
-      <form method="post" action="#">
+      <form method="post" action="#">    <!-- Desktop version-->
         <input type="search" id="loc-search" name="loc-search" size="20" minlength="3" maxlength="20" value="Paris, Belleville">
+      </form>
+      <form method="post" action="#">    <!-- Mobile version, shorter-->
+        <input type="search" id="loc-search-m" name="loc-search-m" size="14" minlength="3" maxlength="20" value="Paris, Belleville">
       </form>
     </div>
     <main>
@@ -61,7 +64,7 @@
       </section>
       <section class="restaurants">         <!-- list of the restaurants -->
         <h2 id="restaurants">Restaurants</h2>
-        <div class="restaurants__block">
+        <div class="restaurants__block">    <!-- Cards of the restaurants -->
           <div class="card">
           <a href="./rest1.html">  <!-- Cards link to the restaurant's page -->
             <div class="card__new-flag">Nouveau</div>

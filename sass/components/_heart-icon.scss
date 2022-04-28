@@ -16,7 +16,7 @@
     }
     & .fa-solid{
         position: absolute;
-        top: 1;
+        top: 1px;
         font-size: x-large;
         @include desktop{
             font-size: xx-large;
@@ -26,7 +26,7 @@
         opacity: 1;
         background: $btn-gradient;
         z-index: 5;
-        -webkit-background-clip:  text;
+        -webkit-background-clip:  text;         /* to fit the background on the icon only */
         background-clip: text;
         -webkit-text-fill-color: transparent;
         transform-origin: bottom;
@@ -35,13 +35,11 @@
     & .fa-regular{
         z-index: 1;
         background: $light-bg;
-        -webkit-background-clip:  text;
-        background-clip: text;
     }
     &:hover{
         cursor: pointer;
         & .fa-solid{
-            animation: heart-fill 400ms 0ms ease-in-out both;
+            animation: heart-fill 300ms 0ms ease-in-out both;
         }
     }
 }
