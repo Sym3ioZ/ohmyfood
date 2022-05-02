@@ -12,6 +12,7 @@ Site prototype: ohmyfood:
 Website to reserve menus in high-end restaurants. Mobile-first approach. Fully responsive.
 
 index.html, rest1.html, rest2.html, rest3.html, rest4.html  +  style.css (compiled from main.scss)
+All files passed W3C validation succesfully.
 
 techs used: html, scss (compiled in style.css)
 main skills developped: 
