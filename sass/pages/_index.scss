@@ -20,6 +20,9 @@
     background: white;
     display: flex;
     flex-direction: column;
+    @include desktop{
+        padding: 80px 20px;
+    }
     & h2{
         @include desktop{
             align-self: center;
@@ -30,6 +33,11 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        @include desktop{
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 50px 0 50px 0;
+        }
     }
 
 
@@ -44,6 +52,9 @@
         align-self: center;
         background: $light-bg;
         color: black;
+        @include desktop{
+            margin: 0 20px;
+        }
     }
     &__buttons .button p{
         font-size: large;

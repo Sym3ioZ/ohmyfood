@@ -12,6 +12,10 @@
     animation: loader-fade 1500ms 2000ms linear both;
     &__logo{
         width: 50%;
+        max-width: 250px;
+        @include desktop{
+            width: 40%;
+        }
         margin: 0 auto 66px;
         & img{
             width: 100%;
@@ -19,11 +23,15 @@
         &__revealer{
             width: 100%;
             height: 100%;
+            @include desktop{
+                width: 50%;
+                left: 33%
+            }
             background: white;
             position: absolute;
-            left: 0;
+            left: 20%;
             transform: translateX(0);
-            animation: loader-revealer-slide 3000ms linear both;
+            animation: loader-revealer-slide 4000ms linear both;
         }
     }
     &__spin{

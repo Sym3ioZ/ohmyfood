@@ -25,6 +25,10 @@ header{
     }
     & img{
         width: 50%;
+        max-width: 250px;
+        @include desktop{
+            width: 40%;
+        }
     }
     @include desktop{
         z-index: 2;
